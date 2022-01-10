@@ -51,6 +51,32 @@ const triangleArea = (base, height) => {
 // console.log("Triangle area: " + triangleArea);
 console.groupEnd();
 
+const triangleEquilateral = (side) => {
+  const sin = Math.sin(Math.PI / 3);
+  const height = side * sin;
+  console.log('HEIGHT: ' + height);
+}
+
+const triangleScalene = (side1, side2, base) => {
+  const a = side2;
+  const b = side1;
+  const c = base;
+
+  const operation = (a**2 + c**2 - b**2) / (2*a*c);
+  const angleB = Math.acos(operation);
+  const height = a * Math.sin(angleB);
+
+  console.log(height);
+}
+
+const triangleHeightCalc = (side1, side2, base) => {
+  if(side1 === side2 && side2 === base) {
+    triangleEquilateral(side1);
+  } else {
+    triangleScalene(side1, side2, base);
+  }
+}
+
 /*  CIRCLE  */
 console.group("Circle");
 
