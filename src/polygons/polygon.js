@@ -6,7 +6,7 @@ const squarePerimeter = (squareSide) => {
   return squareSide * 4;
 }
 // console.log('Each square sides is: ' + squareSide);
-console.log('Square perimeter is: ' + squarePerimeter);
+// console.log('Square perimeter is: ' + squarePerimeter);
 
 const squareArea = (squareSide) => {
   return squareSide ** 2;
@@ -34,7 +34,7 @@ const trianglePerimeter = (side1, side2, base) => {
 console.groupEnd();
 
 const triangleArea = (base, height) => {
-  return (base + height) / 2;
+  return (base * height) / 2;
 }
 // console.log("Triangle area: " + triangleArea);
 console.groupEnd();
@@ -50,7 +50,7 @@ const circumference = (radius) => {
 }
 // console.log("Circumference: " + circumference);
 
-const areaCircle = () => {
+const circleArea = () => {
   return (pi * radius ** 2).toFixed(2);
 }
 // console.log("Area circle: " + areaCircle);
